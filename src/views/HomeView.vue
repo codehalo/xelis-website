@@ -74,11 +74,10 @@ export default {
     display: grid;
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
     gap: var.$spacing-body;
-    align-items: stretch;
+    align-items: start;
     margin-bottom: var.$spacing-body;
 
     > section {
-      height: 100%;
       margin-bottom: 0;
     }
   }

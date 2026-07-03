@@ -33,7 +33,6 @@
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
-  height: 100%;
   padding: clamp(3rem, 4vw, 5rem);
   background: linear-gradient(150deg, rgba(10, 17, 20, 0.6), rgba(6, 12, 15, 0.84));
   border: 1px solid var.$border-soft;
@@ -92,7 +91,6 @@
 
 #network_container {
   position: relative;
-  height: 100%;
 }
 
 #network {
