@@ -9,14 +9,13 @@
         <div class="bg bgtl"></div>
         <div class="bg bgbr"></div>
         <div class="bg bgf"></div>
-        <h2>Client<br />Protocol</h2>
-        <div>
+        <h2>Client Protocol</h2>
+        <div class="client-copy">
           <p>
             XELIS integrates, along with BlockDAG, a method to accept multiple occurrences of the same transaction (TX) and execute it only once.
             Instead of excluding the entire block due to a collision with another BlockDAG branch for a TX,
             we simply refrain from executing the TX and retain its hash.
           </p>
-          <br/>
           <div>
             The same TX can be contained in multiple blocks only if:
             <ul class="list">
@@ -24,12 +23,10 @@
               <li>TX is not already included in the same chain branch (previous blocks).</li>
             </ul>
           </div>
-          <br/>
           <p>
             During the generation of the DAG order (linking unique topoheight to a block hash),
             the first block being ordered will execute the TX first.
           </p>
-          <br/>
           <p>
             This feature allows the acceptance of other branch tips even if transactions are the same and prevent
             more orphans blocks when branches are merged.
@@ -78,6 +75,13 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.8);
     margin: 0.5rem 0;
   }
+
+  .client-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
   .angle {
     position: absolute;
     width: 30px;
@@ -156,8 +160,9 @@
       text-align: center;
       border-bottom: 0;
     }
-    p {
-      margin: 1rem 0;
+
+    .client-copy {
+      gap: 1.5rem;
     }
 
     $client-width: 1280px;

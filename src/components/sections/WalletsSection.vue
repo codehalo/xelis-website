@@ -230,7 +230,7 @@
     }
 
     p {
-      max-width: 46rem;
+      max-width: 100%;
       color: rgba(245, 247, 251, 0.74);
       line-height: 1.55;
     }

@@ -71,13 +71,15 @@
     display: flex;
     flex-direction: column;
     gap: 1.4rem;
-    max-width: 92rem;
+    width: 100%;
     margin-bottom: 4rem;
     position: relative;
     z-index: 1;
 
     h2 {
+      max-width: 100%;
       margin: 0;
+      white-space: nowrap;
     }
   }
 
@@ -119,9 +121,39 @@
   }
 }
 
+@media screen and (max-width: 1600px) {
+  #objectives .objectives-header h2 {
+    font-size: 4.4rem;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  #objectives .objectives-header h2 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  #objectives .objectives-header h2 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #objectives .objectives-header h2 {
+    white-space: normal;
+  }
+}
+
 @media screen and (max-width: 1100px) {
-  #objectives .objectives-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  #objectives {
+    .objectives-header h2 {
+      font-size: 3.5rem;
+    }
+
+    .objectives-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
   }
 }
 
@@ -132,6 +164,11 @@
     .objectives-header {
       align-items: center;
       text-align: center;
+
+      h2 {
+        font-size: 3.5rem;
+        white-space: normal;
+      }
     }
 
     .objectives-grid {

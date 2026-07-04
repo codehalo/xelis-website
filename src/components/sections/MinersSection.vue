@@ -1,7 +1,7 @@
 <template>
     <section id="mining">
         <div class="left">
-            <h2>Miner<br/>Section</h2>
+            <h2>Miner Section</h2>
         </div>
         <div class="right">
             <p>

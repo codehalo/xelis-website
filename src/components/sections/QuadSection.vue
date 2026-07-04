@@ -75,7 +75,8 @@
   h2 {
     position: relative;
     z-index: 1;
-    max-width: 80rem;
+    flex: 1 1 auto;
+    max-width: 100%;
     margin: 0;
 
     >div{

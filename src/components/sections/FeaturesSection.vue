@@ -138,7 +138,7 @@
         text-align: left;
 
         h2 {
-            max-width: 86rem;
+            max-width: 100%;
             margin: 0;
         }
     }

@@ -16,6 +16,7 @@
             01
           </div>
           <div class="text">
+            <div class="item-label">Parallel blocks</div>
             Reduce the rate of orphan's blocks when miners find a block at the same time.
             Instead of choosing one block, both blocks are included in the DAG. 
           </div>
@@ -25,6 +26,7 @@
             02
           </div>
           <div class="text">
+            <div class="item-label">Shared height</div>
             Height is not unique anymore and can have multiple blocks.
           </div>
         </li>
@@ -34,6 +36,7 @@
               03
             </div>
             <div class="text">
+              <div class="item-label">Topo height</div>
               Topo Height (topological height) is the new and unique height for a block which is ordered by the DAG.
             </div>
           </div>
@@ -42,8 +45,9 @@
               04
             </div>
             <div class="text">
-              Up to 3 previous blocks (called TIPS)
-              <ul class="list">
+              <div class="item-label">Tips</div>
+              Up to 3 previous blocks (called TIPS).
+              <ul class="detail-list">
                 <li>
                   Circulating Supply is re-calculated each time the block is reordered because it is based on DAG order.
                 </li>
@@ -56,16 +60,17 @@
             05
           </div>
           <div class="text">
-            <ul class="list">
+            <div class="item-label">Ordering rules</div>
+            <ul class="detail-list">
               <li>
-                Stable height is the last height in which the order of the DAG cannot change.
+                <span class="keyword">Stable height:</span> The last height in which the order of the DAG cannot change.
                 No more blocks can be added before this height.
               </li>
               <li>
-                Best chain is selected by the highest cumulative difficulty.
+                <span class="keyword">Best chain:</span> Selected by the highest cumulative difficulty.
               </li>
               <li>
-                The cumulative difficulty is the sum of the difficulties of all previous blocks in the best chain up to this block.
+                <span class="keyword">Cumulative difficulty:</span> The sum of the difficulties of all previous blocks in the best chain up to this block.
               </li>
             </ul>
           </div>
@@ -75,8 +80,8 @@
             06
           </div>
           <div class="text">
-            Different types of blocks:
-            <ul class="list">
+            <div class="item-label">Block types</div>
+            <ul class="detail-list">
               <li>
                 <span class="keyword">Sync:</span> It is at a stable height and is the only block at its height 
                 (or the only ordered block at this height and doesn't have a lower cumulative difficulty than previous blocks).
@@ -122,9 +127,9 @@
 
   .title {
     display: flex;
-    gap: 4rem;
-    justify-content: space-between;
-    align-items: flex-end;
+    flex-direction: column;
+    gap: 1.4rem;
+    align-items: flex-start;
     padding-bottom: 3rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     position: relative;
@@ -134,6 +139,11 @@
       display: flex;
       flex-direction: column;
       gap: 1.2rem;
+      width: 100%;
+    }
+
+    .section-subtitle {
+      width: 100%;
     }
   }
 
@@ -211,6 +221,25 @@
       font-size: 1.6rem;
       color: rgba(245, 247, 251, 0.82);
       line-height: 2.4rem;
+    }
+
+    .item-label {
+      margin-bottom: 0.8rem;
+      color: var.$ascent-color;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .detail-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin: 1rem 0 0;
+      padding: 0;
+      list-style: none;
     }
 
     .keyword {

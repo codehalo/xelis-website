@@ -4,8 +4,7 @@
         <div id="nodes_container">
             <p>
                 Support and secure the network by running your own node. This improves your privacy and the decentralization of the network.
-                <br />
-                No technical knowlegde is needed, download the software and run it !
+                No technical knowledge is needed, download the software and run it !
             </p>
             <a
                 target="_blank"
@@ -67,7 +66,7 @@ export default {
         box-shadow: 0 18px 48px rgba(0, 0, 0, 0.28);
 
         p {
-            max-width: 70rem;
+            max-width: 100%;
             color: rgba(245, 247, 251, 0.78);
             line-height: 1.6;
         }
